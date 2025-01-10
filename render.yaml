@@ -5,5 +5,3 @@ services:
     buildCommand: "npm install"
     startCommand: "npm start"
     plan: free
-    branches:
-      - main
