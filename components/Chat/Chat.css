@@ -1,0 +1,163 @@
+.main-body{
+	user-select: none;
+	margin-top: 10px;
+	margin-left: 5px;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	z-index: 100;
+}
+.body-cal{
+	width: 100%;
+}
+.body-cal::before{
+	content: "";
+  position: absolute;
+  background-color: #ed2ff0;
+  width: 120px;
+  height: 120px;
+  left: 2%;
+  top: 20%;
+  filter: blur(220px);
+  animation: Fade 10s infinite;
+}
+
+.body-cal::after {
+  content: "";
+  position: absolute;
+  background-color: #ff2976;
+  width: 120px;
+  height: 120px;
+  left: 59%;
+  top: 70%;
+  filter: blur(170px);
+}
+
+@keyframes Fade{
+	0%{
+		rotate: 0deg;
+		transform: translateY(0px);
+	}
+	50%{
+		rotate: 180deg;
+		transform: translateY(200px);
+	}
+	100%{
+		rotate: 360deg;
+		transform: translateY(0px);
+	}
+}
+.body-cal.calendar{
+	cursor: pointer;
+	background: transparent;
+}
+.body-cal.goto, .body-cal.year{
+	padding: 3px;
+	background-color: black;
+	color: grey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.body-cal.goto input, .body-cal.year button{
+	background-color: black;
+	color: silver;
+	border-color: black;
+	border-style: none;
+	color-scheme: dark;
+	transition: border 0.4s ease-in-out;
+}
+.body-cal.year button:hover{
+	border-bottom: 1px solid #fff;
+}
+.body-cal.year{
+	justify-content: space-around;
+}
+.body-cal.goto{
+	justify-content: start;
+}
+.tasks{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content:start;
+}
+#all-tasks{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 5px;
+	align-items: center;
+	justify-content: center;
+	overflow: auto;
+}
+#ind-tasks{
+	margin-top: 5px;
+	height: fit-content;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: whitesmoke;
+	color: #333;
+	padding: 10px;
+	border-radius: 13px;
+	transition: all 1s ease;
+	flex: 0 0 auto;
+	position: relative;
+}
+#ind-tasks:hover{
+	width: 180px;
+}
+#trash-cal{
+	color: red;
+	transition: all 0.3s ease;
+}
+#trash-cal:hover{
+	width: 19px;
+	height: 19px;
+	border-radius: 50%;
+	background-color: red;
+	color: whitesmoke;
+	text-align: center;
+}
+.main-body ul{
+	list-style: none;
+}
+.tasks-cont{
+	background-color: #1f1f1f;
+	border-radius: 12px;
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+}
+.ul-tabs{
+	width: fit-content;
+	height: fit-content;
+	padding: 10px;
+	background: transparent;
+	border-radius: 14px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.ul-tabs li{
+	background: rgba(255, 255, 255, 0.1);
+	padding: 3px;
+	border-radius: 14px;
+	line-height: 1.4;
+	white-space: pre-wrap;
+}
+.calendar-day-header{
+	margin-top: 5px;
+	margin-bottom: 3px;
+	text-align: center;
+	color: #fff;
+	opacity: 0.7;
+}

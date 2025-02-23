@@ -1,0 +1,112 @@
+.weatherBlock {
+    user-select: none;
+    max-width: 330px;
+    max-height: 530px;
+    width: 330px;
+    height: 530px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    background: linear-gradient( #c5eefca6, #8dd1f1b6, #f6b5d67c);
+    color: #242424;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.150);
+    transition: all ease 0.5s;
+    background-image: url('./Images/background.jpg');
+    transition: all 0.7s ease;
+    margin-top: 10px;
+}
+
+.weatherBlock:hover{
+      filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.weatherBlock img{
+    width: 150px;
+    filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.2));
+}
+
+.cityInput {
+    display: flex;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    gap: 3px;
+}
+.cityInput input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 17px;
+}
+.cityInput button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.locationIcon {
+    font-size: 30px;
+}
+
+.weatherIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    transition: all 0.6s ease;
+}
+.weatherIcon:hover{
+    padding: 10px;
+    filter: drop-shadow(0px 0px grey);
+}
+
+.weatherInfoBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weatherInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.weatherInfo p {
+    margin-top: 10px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    color: grey;
+    justify-content: space-around;
+    font-size: 17px;
+}
+
+.weatherBlock h1{
+    margin-top: 10px;
+    color: black;
+}
+.weatherBlock .weatherIcon p{
+    color: #242424;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+@media(max-width: 700px){
+    .weatherBlock{
+        display: none;
+    }
+}

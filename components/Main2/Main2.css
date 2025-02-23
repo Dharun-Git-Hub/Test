@@ -1,0 +1,282 @@
+.gen2{
+  position: absolute;
+  top: 0;
+  right: 4%;
+  width: 35vw;
+  margin: 0;
+  z-index: 2;
+}
+
+.message__text{
+  white-space: pre-wrap;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+.navbar {
+  user-select: none;
+  position: fixed;
+  display: flex;
+  width: 40%;
+  height: 7vh;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #2c2c2c;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar__button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header {
+  text-align: center;
+  padding: 50px;
+}
+
+.header__title{
+  position: relative;
+}
+
+.header__title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.light_mode .header__title h1{
+  color: #333;
+}
+
+.header__greeting {
+  padding-top: 100px;
+  text-align: center;
+  user-select: none;
+  font-size: 2rem;
+  background: -webkit-linear-gradient(100deg,#4b90ff,#ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chat-section {
+  z-index: -1000;
+  padding: 0px;
+  overflow-y: auto;
+  width: 39vw;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  background-color: #fff;
+  top: 7vh;
+  height: 90vh;
+  bottom: 0vh;
+  position: fixed;
+}
+
+.chat-section::-webkit-scrollbar{
+  display: none;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.message--outgoing {
+  margin-top: 80px;
+  justify-content: flex-end;
+}
+
+.message--incoming {
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.message__content {
+  background-color: #2d2d2d;
+  border-radius: 12px;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+@media(max-width: 500px){
+  .message__content{
+    max-width: 90%;
+  }
+}
+
+.gen2 .message__content p {
+  background-color: #2d2d2d;
+  padding: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  color: white;
+}
+
+.gen2 .message__content li{
+  color: whitesmoke;
+}
+
+
+
+.input-section {
+  position: fixed;
+  bottom: 0;
+  width: 40%;
+  padding: 10px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.light_mode .input-section{
+  background-color: white;
+}
+
+.dark_mode .input-section{
+  background-color: #333;
+}
+
+.input-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gen2 .input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-field {
+  width: 85%;
+  height: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  overflow: hidden;
+  height: 40px;
+  max-height: 500px;
+  resize: none;
+  overflow: auto;
+}
+
+.input-field::placeholder{
+  background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light_mode .input-field{
+  color: black;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #5e9ca0;
+}
+
+.send-button,
+.clear-button {
+  background: none;
+  border-radius: 50%;
+  border: none;
+  width : 2.0rem;
+  height: 2.0rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.send-button {
+  margin-left: 10px;
+  color: white;
+  background-color: #333;
+}
+
+.clear-button {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.send-button:hover,
+.clear-button:hover {
+  color: #5e9ca0;
+}
+
+.clear-button:hover {
+  color: #ff6f6f;
+}
+
+/* Footer */
+.gen2 footer {
+  padding: 10px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #bbb;
+  background-color: #1a1a1a;
+}
+
+.code-block-wrapper {
+  position: relative;
+  background-color: #282c34; 
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  overflow: auto;
+}
+
+pre {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  color: #eee; /* Light text */
+}
+
+.copy-button {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  background-color: #0056b3;
+}
+
+.bold-text {
+  font-weight: bold;
+  color: mediumvioletred;
+}
+
+
+.copy-button:focus {
+  outline: none;
+}

@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+
+@tailwind utilities;
+
+.w-screen {
+  user-select: none;
+  width: 100vw;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.lg\:grid {
+  display: grid;
+}
+
+.lg\:grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+  background-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.lg\:block {
+  display: block;
+}
+@media(max-width: 1024px){
+  #pngg{
+    display: none;
+  }
+  #imagefor{
+    display: none;
+  }
+  .lg\:grid {
+  display: flex;
+  }
+  .self-end{
+    align-self: self-start;
+  }
+}
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.hover\:scale-150:hover {
+  transform: scale(1.5);
+  transition: all 0.4s ease-in-out;
+}
+
+.transition-all {
+  transition: all 0.5s;
+}
+
+.duration-500 {
+  transition-duration: 0.5s;
+}
+
+.transform {
+  transform: translate(0, 0);
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#imagefor{
+  transition: all 0.5s ease-in-out;
+}
+
+#imagefor:hover{
+  width: 70%;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.font-display {
+  font-family: 'Arial', sans-serif;
+}
+#inputid{
+  background: transparent;
+}
+.font-bold {
+  font-weight: bold;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-gray-700 {
+  color: #4a5568;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-primarycolor {
+  color: #F9A826;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+  transition: all 0.4s ease-in-out;
+}
+
+.focus\:outline-none:focus {
+  outline: none;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.bg-primarycolor {
+  background-color: #F9A826;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.hover\:translate-y-1:hover {
+  padding: 20px;
+  background-color: #4A5568;
+}
+
+.relative input {
+  border-bottom: 2px solid #e2e8f0; 
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.relative input:hover {
+  border-bottom: 2px solid #F9A826;
+  border-radius: 25%;
+}
+
+.relative input:focus {
+  outline: none;
+  border-bottom: 2px solid #F9A826;
+}
+
+#forget {
+  transition: all 0.4s ease-in-out;
+}
+
+#forget:hover {
+  color: #F9A826;
+}
+#firm{
+  animation: fadeIn 2s;
+}
+.Offline img{
+  width: 300px;
+  height: 300px;
+  animation: fadeIn 1s infinite;
+}
+
+.shining-text {
+  text-align: center;
+  margin: 0;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  user-select: none;
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  50% {
+    background-position: 500%;
+  }
+
+  100% {
+    background-position: -500%;
+  }
+}

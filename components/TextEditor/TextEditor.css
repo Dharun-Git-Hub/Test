@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+.containertxt {
+  background-color: #fff;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+}
+
+.optionstxt {
+  top: 0;
+  user-select: none;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  height:28%;
+}
+
+@media(max-width: 500px){
+  .optionstxt{
+    gap:20px;
+    padding: 0;
+    margin: 10px;
+  }
+  .containertxt button{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.optionstxt button {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  color: #020929;
+  cursor: pointer;
+}
+
+.optionstxt select {
+  padding: 7px;
+  border: 1px solid #020929;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.optionstxt label,
+.optionstxt select {
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type="color"] {
+  background-color: transparent;
+  width: 40px;
+  height: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 50px;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #020929;
+}
+
+#text-input {
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  padding: 20px;
+  height: 80%;
+  overflow: auto;
+  bottom: 0;
+}
+
+#text-input .next {
+  min-height: 1.5em; 
+  margin-bottom: 0.5em;
+}
+
+.active {
+  background-color: #e0e9ff;
+}
+
+@media (max-width:600px){
+  .container{
+    padding: 0px 0px;	  
+  }
+  #text-input{
+    height:78%;
+  }
+}
+.animation-block{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.typewriter-text {
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Source Code Pro", monospace;
+  font-size: 22px;
+  color: #333;
+}
+
+.typewriter-text {
+  animation: animated-text 2s steps(20, end) 1s 1 normal both,
+  animated-cursor 600ms steps(21, end) infinite;
+}
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 260px;
+  }
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(0, 255, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.ai-button{
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: .7rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}

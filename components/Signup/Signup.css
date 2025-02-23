@@ -1,0 +1,105 @@
+
+    #totem::-webkit-scrollbar{
+      display: none;
+    }
+    #totem {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+      transition: all 2s ease-in-out;
+    }
+
+    #totem .containersign {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      background: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      width: 345px;
+      height: 55vh;
+      transition: all 0.5s ease-in-out;
+      animation: fadeInn 2s;
+    }
+    #totem .containersign #step-username , #totem .containersign #step-password, #totem .containersign #step-email , #totem .containersign #step-otp{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      gap: 20px;
+    }
+    #totem .containersign:hover{
+      box-shadow: none;
+    }
+
+    #totem .containersign input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+      background: transparent;
+      opacity: 1;
+      border-radius: 15px;
+      margin-top: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    #totem .containersign input::placeholder{
+      color: white;
+    }
+    #totem .containersign input:focus::placeholder{
+      color:grey;
+    }
+
+    #totem .containersign input:hover{
+    padding: 13px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    #totem .containersign input:focus{
+      background-color: whitesmoke;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      outline: none;
+    }
+    #totem .containersign button {
+      background: #6a11cb;
+      color: #fff;
+      border: none;
+      padding: 20px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #totem .containersign #step-email button{
+      margin-top: 15px;
+      width: 123px;
+    }
+
+    #totem .containersign button:hover {
+      background: #2575fc;
+    }
+
+    .hiddenr {
+      display: none;
+    }
+
+    @keyframes fadeInn{
+      0%{
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    }

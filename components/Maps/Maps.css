@@ -1,0 +1,95 @@
+
+.mapcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #242424;
+}
+        #map {
+            height: 93%;
+            width: 100%;
+        }
+
+        .controlsr {
+            width: 20%;
+            user-select: none;
+            padding: 10px;
+            text-align: center;
+            height: 7%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color: #242424;
+            border-radius: 50px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .infotxt{
+            display: inline-block;
+            background-color: whitesmoke;
+            word-wrap: break-word;
+            overflow: hidden;
+            color: black;
+        }
+
+        .controlsr input {
+            border: none;
+            width: 200px;
+            padding: 5px;
+            margin-right: 10px;
+            outline: none;
+            border-radius: 55px;
+        }
+
+        .controlsr button {
+            width: 60px;
+            padding: 5px 10px;
+        }
+
+        .controlsr button:hover {
+            background-color: #2f2f2f;
+            color: white;
+            width: 60px;
+            padding: 5px 10px;
+        }
+.aibutton{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1000;
+    background-color: whitesmoke;
+    filter: drop-shadow(0px 1px 3px black);
+}
+#suggested{
+    background-color: whitesmoke;
+    top: 10vh;
+    left: 80vw;
+    border-radius: 13px;
+    position: absolute;
+    z-index: 1000;
+    transition: all 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    overflow: auto;
+}
+#aied {
+    margin: 5px;
+    background: transparent;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #333;
+    overflow-y: auto; 
+    max-height: 280px;
+    padding: 10px;
+    position: relative; 
+    font-size: 1rem;
+}
+
